@@ -1,7 +1,7 @@
 My - Excercise
-# Basic HTML Website 
+
+# Basic HTML Website
 
 ## Live Demo
-[View the project here](https://indrasetiawn.github.io/singlePage/)
 
-
+[View the project here](https://indrasetiawn.github.io/basic-html/)
