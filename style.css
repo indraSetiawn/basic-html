@@ -10,11 +10,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  list-style-type: none;
   text-decoration: none;
   color: #000;
   font-family: var(--f2);
-  list-style-type: square;;
+  list-style-type: square;
+  ;
 }
 
 
@@ -47,11 +47,27 @@ nav {
   margin: 0 0.7rem;
 }
 
+#header .right {
+  display: flex;
+}
+
 .header-section nav .right a {
   color: #000;
-  font-family: var(--f2);
   padding: 0 0.4rem;
 
+}
+
+#header .right a:after {
+  content: "";
+  display: block;
+  padding-bottom: 0.2rem;
+  border-bottom: 2px solid #000;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+#header .right a:hover::after {
+  transform: scaleX(0.5);
 }
 
 .end-nav {
@@ -91,7 +107,6 @@ h3 {
 
 .left-section .row {
   padding: 10px 20px;
-
 }
 
 .left-section .row:nth-child(2) {
@@ -111,6 +126,7 @@ h3 {
 }
 
 
+
 .title-content {
   padding: 10px 20px;
   font-family: var(--f1);
@@ -118,6 +134,7 @@ h3 {
   font-weight: 600;
   display: block;
 }
+
 /* left section start*/
 /* Middle section start*/
 .middle-section {
@@ -126,30 +143,28 @@ h3 {
   width: 40%;
   height: 100%;
   border-right: 2px solid #000;
-  
+
 }
 
-.middle-section .row{
-  border-bottom: 2px solid #000;
-}
+
 
 .middle-section .row .content,
-.right-section .row .content
-{
+.right-section .row .content {
   padding: 10px 20px;
-  padding-top : 0;
+  padding-top: 0;
 }
 
-.linked{
+.linked {
   color: rgb(3, 87, 165);
   font-size: 0.8rem;
   margin-top: 0.8rem;
   display: block;
 }
 
-.linked:hover{
+.linked:hover {
   text-decoration: underline;
 }
+
 /* Middle section end*/
 /* Right section start */
 .right-section {
@@ -158,24 +173,28 @@ h3 {
   font-size: 0.9rem;
 }
 
-.right-section::after{
+.right-section::after {
+  content: "";
+  display: table;
   clear: both;
 }
 
-.e-course{
+
+.e-course {
   margin: 10px 0;
   display: block;
 }
 
-.row .content .list-item{
+.row .content .list-item {
   padding-left: 10px;
 }
+
 /* Right section end */
 /* content end */
 /* Footer section start */
 
 
-#footer .row{
+#footer .row {
   display: flex;
   margin-top: 1rem;
   padding: 0 2rem;
@@ -183,33 +202,34 @@ h3 {
   font-size: 0.9rem;
 }
 
-#footer .row .card-reviews{
+#footer .row .card-reviews {
   border: 2px solid #000;
   width: 29%;
   border-radius: 24px;
   padding: 1rem;
 }
 
-#footer .row .card-reviews p:nth-child(2){
+#footer .row .card-reviews p:nth-child(2) {
   font-size: 0.9rem;
   margin-top: 0.9rem;
   color: gray;
 }
 
-#footer .row span:nth-child(1){
+#footer .row span:nth-child(1) {
   font-family: var(--f1);
-  margin-top: 4rem;
+  margin-top: 1rem;
   font-size: 1.3rem;
   margin-bottom: 1rem;
 }
+
 /* Footer section end */
 
 /* Media Querys */
-@media(max-width: 1200px) {
+@media(max-width: 1366px) {
+
   .left-section,
   .right-section,
-  .middle-section 
-  {
+  .middle-section {
     width: 100%;
     border-right: none;
   }
@@ -217,4 +237,107 @@ h3 {
   .middle-section {
     height: auto;
   }
+
+  
+}
+
+/* Tablet */
+@media(max-width: 758px) {
+  html {
+    font-size: 80.5%;
+
+  }
+
+  .hero {
+    width: 95%;
+  }
+
+  #header .right {
+    display: flex;
+  }
+
+
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #header .left {
+    display: block;
+  }
+
+  #header .end-nav {
+    padding: 1.2rem;
+  }
+
+  .left-section {
+    height: 80%;
+  }
+
+  .left-section .row:nth-child(6) {
+    border-bottom: 2px solid #000;
+  }
+
+  .left-section .row:nth-child(2) {
+    border-top: 2px solid #000;
+  }
+
+  .middle-section .row .content {
+    border-bottom: 2px solid #000;
+    border-top: 2px solid #000;
+  }
+
+  .right-section .row .content {
+    border-bottom: 2px solid #000;
+  }
+
+  .title-content {
+    text-align: center;
+  }
+
+  #content .left-section .row {
+    background-color: rgb(190, 201, 198);
+  }
+
+  #content .left-section .active {
+    background-color: rgb(165, 182, 178);
+  }
+
+  #content .left-section .row:hover {
+    background-color: rgb(165, 182, 178);
+    transition: 0.2s linear;
+  }
+
+  #content .middle-section .content {
+    background-color: rgb(190, 201, 198);
+    padding: 10px 20px;
+  }
+
+  #footer .row {
+    flex-direction: column;
+    display: flex;
+    margin: 0;
+  }
+
+  #footer #title-c {
+    margin-top: 30.6rem;
+    padding: 0;
+
+  }
+
+  #footer .row .card-reviews {
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  #footer .row span {
+    text-align: center;
+  }
+}
+
+/* Handphone */
+@media(max-width: 450px) {
+  
 }
